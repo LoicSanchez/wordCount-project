@@ -1,5 +1,14 @@
-<h1>ABOUT</h1>
+{% include "./partials/header.html" %}
 
-<p>Hello my name is {{ name }}. This is a simple website built to count the words in the text copied by the user.</p>
+<div class= "ui main text container segment" style="margin-top: 4em;">
+    <div class="ui huge header">
+        About
+    </div>
+    <div class="ui top attached">
+        <div class="item">
+            <p>Hello my name is {{ name }}. This is a simple website built to count the words in the text copied by the user.</p>
+        </div>
+    </div>
+</div>
 
-<a href="/">Home</a>
+{% include "./partials/footer.html" %}

@@ -1,13 +1,21 @@
-<h1>Count: there are {{ count }} words in your text</h1>
+{% include "./partials/header.html" %}
 
-<a href='/'>Start again</a>
-<h1>Your text:</h1>
-<p>'{{ fulltext }}'</p>
+<div class= "ui main text container segment" style="margin-top: 4em; margin-bottom: 4em;">
+    <div class="ui huge header">
+        Count: there are {{ count }} words in your text
+    </div>
 
-<h1>Word count</h1>
-<p>
-    {% for word, countTot in sortedWords %}
-    {{ word }} - {{ countTot }}
-    <br />
-    {% endfor %}
-</p>
+    <a class="ui button" href='/'>Start again</a>
+    <h1>Your text:</h1>
+    <p>'{{ fulltext }}'</p>
+    
+    <h1>Word count</h1>
+    <p>
+        {% for word, countTot in sortedWords %}
+        {{ word }} - {{ countTot }}
+        <br />
+        {% endfor %}
+    </p>
+</div>
+
+{% include "./partials/footer.html" %}
